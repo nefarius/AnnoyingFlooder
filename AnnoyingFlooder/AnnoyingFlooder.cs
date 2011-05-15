@@ -64,7 +64,7 @@ namespace AnnoyingFlooder
 
         private void backgroundWorkerWrite_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Schreiben des Streams
+            // Create new stream
             IntPtr fileHandle = CreateFile(textBoxFilename.Text + 
                 ":" + textBoxStream.Text,
                 FILE_ACCESS_RIGHTS.GENERIC_WRITE,
@@ -103,8 +103,11 @@ namespace AnnoyingFlooder
 
         private void textBoxFilesize_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int isNumber = 0;
-            e.Handled = !int.TryParse(e.KeyChar.ToString(), out isNumber);
+            // Handle backspace
+            if (e.KeyChar == 8)
+                return;
+            // Only allow numbers
+            e.Handled = !Char.IsDigit(e.KeyChar);
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -116,7 +119,11 @@ namespace AnnoyingFlooder
 
         private void textBoxStream_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !Regex.IsMatch(e.KeyChar.ToString(), @"^\w+(\.\w+)?$");
+            // Handle backspace
+            if (e.KeyChar == 8)
+                return;
+            // Allow only letters, numbers, points and underscores
+            e.Handled = !Regex.IsMatch(e.KeyChar.ToString(), @"^[\w+\.]?$");
         }
     }
 }
