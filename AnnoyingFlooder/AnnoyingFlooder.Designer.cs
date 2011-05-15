@@ -133,6 +133,10 @@
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
+            // saveFileDialogHidden
+            // 
+            this.saveFileDialogHidden.Filter = "All files|*.*";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pictureBox5);
