@@ -36,6 +36,8 @@
             this.buttonGo = new System.Windows.Forms.Button();
             this.progressBarWrite = new System.Windows.Forms.ProgressBar();
             this.backgroundWorkerWrite = new System.ComponentModel.BackgroundWorker();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.saveFileDialogHidden = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -62,20 +64,19 @@
             this.textBoxFilename.Name = "textBoxFilename";
             this.textBoxFilename.Size = new System.Drawing.Size(178, 20);
             this.textBoxFilename.TabIndex = 2;
-            this.textBoxFilename.Text = "M:\\test.txt";
             // 
             // textBoxFilesize
             // 
             this.textBoxFilesize.Location = new System.Drawing.Point(67, 50);
             this.textBoxFilesize.Name = "textBoxFilesize";
-            this.textBoxFilesize.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFilesize.Size = new System.Drawing.Size(58, 20);
             this.textBoxFilesize.TabIndex = 3;
             this.textBoxFilesize.Text = "1024";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(173, 53);
+            this.label3.Location = new System.Drawing.Point(131, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 4;
@@ -83,7 +84,7 @@
             // 
             // buttonGo
             // 
-            this.buttonGo.Location = new System.Drawing.Point(173, 94);
+            this.buttonGo.Location = new System.Drawing.Point(254, 94);
             this.buttonGo.Name = "buttonGo";
             this.buttonGo.Size = new System.Drawing.Size(75, 23);
             this.buttonGo.TabIndex = 5;
@@ -95,7 +96,7 @@
             // 
             this.progressBarWrite.Location = new System.Drawing.Point(15, 94);
             this.progressBarWrite.Name = "progressBarWrite";
-            this.progressBarWrite.Size = new System.Drawing.Size(152, 23);
+            this.progressBarWrite.Size = new System.Drawing.Size(233, 23);
             this.progressBarWrite.TabIndex = 6;
             // 
             // backgroundWorkerWrite
@@ -105,11 +106,22 @@
             this.backgroundWorkerWrite.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorkerWrite_ProgressChanged);
             this.backgroundWorkerWrite.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerWrite_RunWorkerCompleted);
             // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(254, 22);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 7;
+            this.buttonSearch.Text = "Search...";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
             // AnnoyingFlooder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 133);
+            this.ClientSize = new System.Drawing.Size(339, 133);
+            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.progressBarWrite);
             this.Controls.Add(this.buttonGo);
             this.Controls.Add(this.label3);
@@ -137,6 +149,8 @@
         private System.Windows.Forms.Button buttonGo;
         private System.Windows.Forms.ProgressBar progressBarWrite;
         private System.ComponentModel.BackgroundWorker backgroundWorkerWrite;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogHidden;
     }
 }
 

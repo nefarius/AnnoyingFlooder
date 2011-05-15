@@ -102,5 +102,12 @@ namespace AnnoyingFlooder
             int isNumber = 0;
             e.Handled = !int.TryParse(e.KeyChar.ToString(), out isNumber);
         }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialogHidden.ShowDialog() ==
+                System.Windows.Forms.DialogResult.OK)
+                textBoxFilename.Text = saveFileDialogHidden.FileName;
+        }
     }
 }
