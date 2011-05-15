@@ -50,7 +50,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 72);
+            this.label2.Location = new System.Drawing.Point(12, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             // textBoxFilesize
             // 
-            this.textBoxFilesize.Location = new System.Drawing.Point(70, 69);
+            this.textBoxFilesize.Location = new System.Drawing.Point(67, 50);
             this.textBoxFilesize.Name = "textBoxFilesize";
             this.textBoxFilesize.Size = new System.Drawing.Size(100, 20);
             this.textBoxFilesize.TabIndex = 3;
@@ -75,7 +75,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(176, 72);
+            this.label3.Location = new System.Drawing.Point(173, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             // buttonGo
             // 
-            this.buttonGo.Location = new System.Drawing.Point(173, 114);
+            this.buttonGo.Location = new System.Drawing.Point(173, 94);
             this.buttonGo.Name = "buttonGo";
             this.buttonGo.Size = new System.Drawing.Size(75, 23);
             this.buttonGo.TabIndex = 5;
@@ -93,7 +93,7 @@
             // 
             // progressBarWrite
             // 
-            this.progressBarWrite.Location = new System.Drawing.Point(15, 114);
+            this.progressBarWrite.Location = new System.Drawing.Point(15, 94);
             this.progressBarWrite.Name = "progressBarWrite";
             this.progressBarWrite.Size = new System.Drawing.Size(152, 23);
             this.progressBarWrite.TabIndex = 6;
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 155);
+            this.ClientSize = new System.Drawing.Size(263, 133);
             this.Controls.Add(this.progressBarWrite);
             this.Controls.Add(this.buttonGo);
             this.Controls.Add(this.label3);
