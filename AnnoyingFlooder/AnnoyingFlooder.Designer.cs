@@ -88,6 +88,7 @@
             this.textBoxFilesize.Size = new System.Drawing.Size(58, 20);
             this.textBoxFilesize.TabIndex = 3;
             this.textBoxFilesize.Text = "1024";
+            this.textBoxFilesize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFilesize_KeyPress);
             // 
             // label3
             // 
