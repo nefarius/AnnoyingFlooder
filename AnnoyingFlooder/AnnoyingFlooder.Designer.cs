@@ -40,19 +40,19 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.saveFileDialogHidden = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxStream = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.textBoxStream = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,23 +153,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(179, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Stream:";
-            // 
-            // textBoxStream
-            // 
-            this.textBoxStream.Location = new System.Drawing.Point(221, 46);
-            this.textBoxStream.Name = "textBoxStream";
-            this.textBoxStream.Size = new System.Drawing.Size(63, 20);
-            this.textBoxStream.TabIndex = 11;
-            this.textBoxStream.Text = "hidden";
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::AnnoyingFlooder.Properties.Resources.port;
@@ -179,14 +162,23 @@
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox4
+            // textBoxStream
             // 
-            this.pictureBox4.Image = global::AnnoyingFlooder.Properties.Resources.bomb;
-            this.pictureBox4.Location = new System.Drawing.Point(239, 231);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
+            this.textBoxStream.Location = new System.Drawing.Point(221, 46);
+            this.textBoxStream.Name = "textBoxStream";
+            this.textBoxStream.Size = new System.Drawing.Size(63, 20);
+            this.textBoxStream.TabIndex = 11;
+            this.textBoxStream.Text = "hidden";
+            this.textBoxStream.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStream_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(179, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Stream:";
             // 
             // pictureBox3
             // 
@@ -206,6 +198,15 @@
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::AnnoyingFlooder.Properties.Resources.bomb;
+            this.pictureBox4.Location = new System.Drawing.Point(239, 231);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AnnoyingFlooder.Properties.Resources.nefarius;
@@ -220,9 +221,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 234);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 13);
+            this.label5.Size = new System.Drawing.Size(167, 13);
             this.label5.TabIndex = 11;
-            this.label5.Text = "2011 Nefarius | Design Teyhouse";
+            this.label5.Text = "2011 Nefarius | Design: Teyhouse";
             // 
             // AnnoyingFlooder
             // 
@@ -245,9 +246,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

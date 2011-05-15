@@ -9,11 +9,13 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Microsoft.Win32.SafeHandles;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace AnnoyingFlooder
 {
     public partial class AnnoyingFlooder : Form
     {
+        #region WinAPI
         private enum FILE_ACCESS_RIGHTS : uint
         {
             GENERIC_READ = 0x80000000,
@@ -45,6 +47,7 @@ namespace AnnoyingFlooder
 
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern bool CloseHandle(IntPtr handle);
+        #endregion
 
         public AnnoyingFlooder()
         {
@@ -108,6 +111,11 @@ namespace AnnoyingFlooder
             if (saveFileDialogHidden.ShowDialog() ==
                 System.Windows.Forms.DialogResult.OK)
                 textBoxFilename.Text = saveFileDialogHidden.FileName;
+        }
+
+        private void textBoxStream_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Regex.IsMatch(e.KeyChar.ToString(), @"^\w+(\.\w+)?$");
         }
     }
 }
