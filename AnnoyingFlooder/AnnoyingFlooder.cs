@@ -65,7 +65,8 @@ namespace AnnoyingFlooder
         private void backgroundWorkerWrite_DoWork(object sender, DoWorkEventArgs e)
         {
             // Schreiben des Streams
-            IntPtr fileHandle = CreateFile(textBoxFilename.Text + ":hidden",
+            IntPtr fileHandle = CreateFile(textBoxFilename.Text + 
+                ":" + textBoxStream.Text,
                 FILE_ACCESS_RIGHTS.GENERIC_WRITE,
                 FileShare.Write,
                 0,
