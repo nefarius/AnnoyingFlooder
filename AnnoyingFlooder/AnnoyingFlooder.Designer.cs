@@ -111,9 +111,9 @@
             // 
             // progressBarWrite
             // 
-            this.progressBarWrite.Location = new System.Drawing.Point(-5, 250);
+            this.progressBarWrite.Location = new System.Drawing.Point(-2, 250);
             this.progressBarWrite.Name = "progressBarWrite";
-            this.progressBarWrite.Size = new System.Drawing.Size(363, 16);
+            this.progressBarWrite.Size = new System.Drawing.Size(351, 15);
             this.progressBarWrite.TabIndex = 6;
             // 
             // backgroundWorkerWrite
