@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>bomba.ico</ApplicationIcon>
+    <ApplicationIcon>1305495572_clanbomber.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
@@ -94,6 +94,7 @@
     <None Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="1305495572_clanbomber.ico" />
     <Content Include="bomba.ico" />
     <None Include="Resources\port.gif" />
     <None Include="Resources\bomb.png" />
