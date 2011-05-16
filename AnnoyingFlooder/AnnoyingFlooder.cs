@@ -56,6 +56,32 @@ namespace AnnoyingFlooder
 
         private void buttonGo_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBoxFilename.Text))
+            {
+                if (MessageBox.Show("You didn't specify a file or directory name. " +
+                    "If you leave this value blank, the stream will be created " +
+                    "in the current working directory. Continue?",
+                    "Filename empty",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                    System.Windows.Forms.DialogResult.No)
+                    return;
+            }
+
+            if (string.IsNullOrEmpty(textBoxFilesize.Text))
+            {
+                MessageBox.Show("You have to specify the size of the stream!",
+                    "File/Stream size missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(textBoxStream.Text))
+            {
+                MessageBox.Show("You have to define the name of the stream. " +
+                "Without, the original content of the file will be corrupted!", 
+                "No stream name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             buttonGo.Enabled = false;
             progressBarWrite.Minimum = 0;
             progressBarWrite.Maximum = int.Parse(textBoxFilesize.Text);
